@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Linechaser</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <title>Maps</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <%= analytics_init if Rails.env.production? %>
+  <script src="https://maps.googleapis.com/maps/api/js?"></script>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+  <script src="javascripts/insert_map.js"></script>
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="container">
+        <div class="container-fluid">
+            <%= yield %>
+        </div>
+    </div>
 </body>
-</html>
